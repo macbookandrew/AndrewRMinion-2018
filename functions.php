@@ -172,3 +172,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Allow SVG file uploads
+ * @param  array $mime_types array of allowed mime types
+ * @return array modified array
+ */
+function armd_mime_types( $mime_types ) {
+    $mime_types['svg'] = 'image/svg+xml';
+    return $mime_types;
+}
+add_filter( 'upload_mimes', 'armd_mime_types' );
