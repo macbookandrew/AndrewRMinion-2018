@@ -1,2 +1,13 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+@mixin site-width(
+    $display: block,
+    $width: 1280px,
+    ) {
+        max-width: $width;
+        margin: 0 auto;
+        display: $display;
+        padding-right: 1em;
+        padding-left: 1em;
+}

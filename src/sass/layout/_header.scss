@@ -1,0 +1,31 @@
+.site-header {
+    background-color: $theme-dark-gray;
+    color: $theme-green;
+
+    .site-branding, .main-navigation {
+        @include site-width(flex);
+    }
+}
+
+.site-branding {
+    .custom-logo {
+        width: 100px;
+        min-width: 100px;
+        padding-right: 1em;
+    }
+
+    h1.page-title {
+        clear: none;
+        display: inline-block;
+        margin-right: 100px;
+    }
+
+    @supports (display: flex) {
+        align-items: center;
+
+        .page-title {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

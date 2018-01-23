@@ -1,4 +1,5 @@
 $theme-light-gray:   #E9E8EA;
+$theme-med-gray:     #78797C;
 $theme-dark-gray:    #4A464B;
 $theme-green:        #67B346;
 
@@ -14,7 +15,7 @@ $color__text-input: $theme-dark-gray;
 $color__text-input-focus: #111;
 $color__link: $theme-green;
 $color__link-visited: $theme-green;
-$color__link-hover: #23236c;
+$color__link-hover: darken($theme-green, 15);
 $color__text-main: $theme-dark-gray;
 
 $color__border-button: #ccc #ccc #bbb;
