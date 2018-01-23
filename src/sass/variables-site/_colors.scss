@@ -7,7 +7,7 @@ $color__background-body: $theme-light-gray;
 $color__background-screen: $theme-light-gray;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
-$color__background-pre: #eee;
+$color__background-pre: lighten($theme-green, 48);
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
@@ -23,3 +23,4 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+$color__border-pre: lighten($theme-green, 28);
