@@ -7,6 +7,8 @@
  * @package AndrewRMinion_Design_2018
  */
 
+const ARMD_THEME_VERSION = '1.0.0';
+
 if ( ! function_exists( 'andrewrminion_setup' ) ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -117,11 +119,11 @@ add_action( 'widgets_init', 'andrewrminion_widgets_init' );
  * Enqueue scripts and styles.
  */
 function andrewrminion_scripts() {
-    wp_enqueue_style( 'andrewrminion-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'andrewrminion-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), ARMD_THEME_VERSION );
 
-    wp_enqueue_script( 'andrewrminion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'andrewrminion-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array(), ARMD_THEME_VERSION, true );
 
-    wp_enqueue_script( 'andrewrminion-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'andrewrminion-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), ARMD_THEME_VERSION, true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
