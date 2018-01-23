@@ -5,6 +5,11 @@
     .site-branding, .main-navigation {
         @include site-width(flex);
     }
+
+    .page-description {
+        @include site-width();
+        text-align: center;
+    }
 }
 
 .site-branding {

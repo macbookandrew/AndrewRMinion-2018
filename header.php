@@ -41,6 +41,11 @@
             ?>
             <h1 class="page-title">&lt;<?php echo $title ?>/&gt;</h1>
         </div><!-- .site-branding -->
+        <?php
+        if ( get_field( 'page_description' ) !== '' && ! is_null( get_field( 'page_description' ) ) ) { ?>
+            <div class="page-description"><?php the_field( 'page_description' ); ?></div>
+        <?php
+        } ?>
 
         <nav id="site-navigation" class="main-navigation">
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'andrewrminion' ); ?></button>
