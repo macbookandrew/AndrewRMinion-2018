@@ -31,7 +31,12 @@
             if ( get_field( 'custom_header' ) !== '' && ! is_null( get_field( 'custom_header' ) ) ) {
                 $title = get_field( 'custom_header' );
             } else {
-                $title = lcfirst( str_replace( ' ', '<wbr>', get_the_title() ) );
+                if ( is_singular() ) {
+                    $page_title = ucwords( get_the_title() );
+                } elseif ( is_archive() || is_tax() ) {
+                    $page_title = ucwords( get_the_archive_title() );
+                }
+                $title = lcfirst( str_replace( ' ', '<wbr>', $page_title ) );
             }
             ?>
             <h1 class="page-title">&lt;<?php echo $title ?>/&gt;</h1>
