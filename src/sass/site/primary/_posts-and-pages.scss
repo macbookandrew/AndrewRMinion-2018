@@ -1,3 +1,7 @@
+.site-content {
+    @include site-width();
+}
+
 .sticky {
     display: block;
 }
