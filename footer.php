@@ -20,10 +20,7 @@
                 printf( esc_html__( 'Proudly powered by %s', 'andrewrminion' ), 'WordPress' );
             ?></a>
             <span class="sep"> | </span>
-            <?php
-                /* translators: 1: Theme name, 2: Theme author. */
-                printf( esc_html__( 'Theme: %1$s by %2$s.', 'andrewrminion' ), 'andrewrminion', '<a href="https://andrewrminion.com">Andrew Minion</a>' );
-            ?>
+            <span class="font-credits">Fonts: <a href="https://www.exljbris.com/delicious.html" target="_blank" rel="noreferrer">Delicious by exljbris</a> and <a href="https://fonts.google.com/specimen/Source+Code+Pro" target="_blank" rel="noreferrer">Source Code Pro by Paul D. Hunt</a></span>
         </div><!-- .site-info -->
     </footer><!-- #colophon -->
 </div><!-- #page -->

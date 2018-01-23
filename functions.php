@@ -128,6 +128,20 @@ function andrewrminion_scripts() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+
+    $webfonts = "
+    WebFont.load({
+        custom: {
+            families: ['Delicious:n4,i4,n7,i7,n8', 'Delicious Small Caps'],
+            urls: ['" . get_stylesheet_directory_uri() . "/assets/fonts/stylesheet.css']
+        },
+        google: {
+          families: ['Source Code Pro:500,900']
+        },
+    });";
+
+    wp_enqueue_script( 'webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' );
+    wp_add_inline_script( 'webfont-loader', $webfonts );
 }
 add_action( 'wp_enqueue_scripts', 'andrewrminion_scripts' );
 
