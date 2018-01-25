@@ -206,3 +206,86 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'portfolio-banner', 1000, 288, true );
     add_image_size( 'portfolio-banner-large', 1500, 432, true );
 }
+
+/**
+ * Register Portfolio CPT and Project Types taxonomy
+ */
+function armd_custom_post_type() {
+    $labels = array(
+        'name'                => 'Portfolio',
+        'singular_name'       => 'Portfolio',
+        'menu_name'           => 'Portfolio',
+        'archives'            => 'Portfolio',
+        'parent_item_colon'   => 'Parent Portfolio Piece:',
+        'all_items'           => 'All Portfolio Pieces',
+        'view_item'           => 'View Portfolio Piece',
+        'add_new_item'        => 'Add New Portfolio Piece',
+        'add_new'             => 'New Portfolio Piece',
+        'edit_item'           => 'Edit Portfolio Piece',
+        'update_item'         => 'Update Portfolio Piece',
+        'search_items'        => 'Search Portfolio Pieces',
+        'not_found'           => 'No portfolio pieces found',
+        'not_found_in_trash'  => 'No portfolio pieces found in Trash',
+    );
+
+    $rewrite = array(
+        'slug'                => 'work',
+        'with_front'          => true,
+        'pages'               => true,
+        'feeds'               => true,
+    );
+
+    $args = array(
+        'label'               => 'portfolio_piece',
+        'description'         => 'Portfolio',
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'page-attributes', ),
+        'taxonomies'          => array( 'project_types' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-portfolio',
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'rewrite'             => $rewrite,
+        'capability_type'     => 'post',
+    );
+
+    register_post_type( 'portfolio_piece', $args );
+
+    $tax_labels = array(
+        'name'                       => 'Project Types',
+        'singular_name'              => 'Project Type',
+        'menu_name'                  => 'Project Type',
+        'all_items'                  => 'Project Types',
+        'parent_item'                => 'Project Type',
+        'parent_item_colon'          => 'Project Type:',
+        'new_item_name'              => 'New Project Type',
+        'add_new_item'               => 'Add New Project Type',
+        'edit_item'                  => 'Edit Project Type',
+        'update_item'                => 'Update Project Type',
+        'separate_items_with_commas' => 'Separate project types with commas',
+        'search_items'               => 'Search project types',
+        'add_or_remove_items'        => 'Add or remove project types',
+        'choose_from_most_used'      => 'Choose from the most used project types',
+    );
+
+    $tax_args = array(
+        'labels'                     => $tax_labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+
+    register_taxonomy( 'project_types', 'portfolio_piece', $args );
+}
+add_action( 'init', 'armd_custom_post_type', 0 );
