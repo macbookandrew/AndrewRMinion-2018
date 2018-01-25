@@ -202,10 +202,11 @@ add_filter( 'acf/settings/load_json', 'armd_acf_json_load_point' );
 /**
  * Add custom thumbnail size
  */
-if ( function_exists( 'add_image_size' ) ) {
+function armd_image_sizes() {
     add_image_size( 'portfolio-banner', 2000, 288, true );
     add_image_size( 'portfolio-banner-large', 3000, 432, true );
 }
+add_action( 'after_setup_theme', 'armd_image_sizes' );
 
 /**
  * Register Portfolio CPT and Project Types taxonomy
