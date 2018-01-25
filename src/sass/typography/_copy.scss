@@ -25,6 +25,12 @@ pre {
     max-width: 100%;
     overflow: auto;
     padding: 1.6em;
+
+    > code {
+        border: none;
+        background-color: none;
+        padding: 0;
+    }
 }
 
 code, kbd, tt, var {
