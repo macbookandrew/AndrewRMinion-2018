@@ -14,6 +14,17 @@ textarea {
 
 @import "copy";
 
+.entry-meta,
+.entry-footer {
+    font-size: 80%;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.entry-footer > span {
+    display: block;
+}
+
 .site-footer {
     font-size: 80%;
 }
