@@ -28,7 +28,7 @@
         <div class="site-branding">
             <a href="<?php echo home_url(); ?>" class="custom-logo-link" rel="home" itemprop="url"><img class="custom-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ARMD-logo.svg" alt="AndrewRMinion Design" /></a>
             <?php
-            if ( get_field( 'custom_header' ) !== '' && ! is_null( get_field( 'custom_header' ) ) ) {
+            if ( function_exists( 'get_field' ) && get_field( 'custom_header' ) !== '' && ! is_null( get_field( 'custom_header' ) ) ) {
                 $title = get_field( 'custom_header' );
             } else {
                 if ( is_singular() ) {
@@ -42,7 +42,7 @@
             <h1 class="page-title">&lt;<?php echo $title ?>/&gt;</h1>
         </div><!-- .site-branding -->
         <?php
-        if ( get_field( 'page_description' ) !== '' && ! is_null( get_field( 'page_description' ) ) ) { ?>
+        if ( function_exists( 'get_field' ) && get_field( 'page_description' ) !== '' && ! is_null( get_field( 'page_description' ) ) ) { ?>
             <div class="page-description"><?php the_field( 'page_description' ); ?></div>
         <?php
         } ?>
