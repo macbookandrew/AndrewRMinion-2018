@@ -17,6 +17,12 @@ li > ol {
     margin-left: 1.5em;
 }
 
+li {
+    > gist {
+        margin-top: -3ex;
+    }
+}
+
 dt {
     font-weight: bold;
 }
