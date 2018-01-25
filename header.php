@@ -33,7 +33,7 @@
             } else {
                 if ( is_singular() ) {
                     $page_title = ucwords( get_the_title() );
-                } elseif ( is_archive() || is_tax() ) {
+                } elseif ( is_home() || is_archive() || is_tax() ) {
                     $page_title = ucwords( get_the_archive_title() );
                 }
                 $title = lcfirst( str_replace( ' ', '<wbr>', $page_title ) );
