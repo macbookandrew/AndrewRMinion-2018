@@ -290,3 +290,13 @@ function armd_custom_post_type() {
     register_taxonomy( 'project_types', 'portfolio_piece', $args );
 }
 add_action( 'init', 'armd_custom_post_type', 0 );
+
+/**
+ * Remove “Archives:” from archive title
+ * @param  string $title default archive title
+ * @return string modified archive title
+ */
+function armd_archive_title( $title ) {
+    return str_replace( 'Archives: ', '', $title );
+}
+add_filter( 'get_the_archive_title', 'armd_archive_title' );
