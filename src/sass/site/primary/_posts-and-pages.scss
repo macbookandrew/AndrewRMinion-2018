@@ -1,4 +1,7 @@
-.site-main {
+.site-main > *:not(.hentry),
+.entry-header,
+.entry-content,
+.entry-footer {
     @include site-width();
 }
 
@@ -9,11 +12,6 @@
 .hentry {
     margin: 0 0 1.5em;
     padding-bottom: 1.5em;
-
-    + .hentry {
-        padding-top: 1.5em;
-        border-top: 3px solid $theme-med-gray;
-    }
 }
 
 .updated:not(.published) {
@@ -23,10 +21,22 @@
 .page-content,
 .entry-content,
 .entry-summary {
-    margin: 1.5em 0 0;
+    margin-top: 1.5em;
 }
 
 .page-links {
     clear: both;
     margin: 0 0 1.5em;
+}
+
+a.post-thumbnail {
+    display: block;
+    text-align: center;
+
+    &, 
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none;
+    }
 }

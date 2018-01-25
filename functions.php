@@ -203,8 +203,8 @@ add_filter( 'acf/settings/load_json', 'armd_acf_json_load_point' );
  * Add custom thumbnail size
  */
 if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'portfolio-banner', 1000, 288, true );
-    add_image_size( 'portfolio-banner-large', 1500, 432, true );
+    add_image_size( 'portfolio-banner', 2000, 288, true );
+    add_image_size( 'portfolio-banner-large', 3000, 432, true );
 }
 
 /**
