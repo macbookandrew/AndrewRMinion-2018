@@ -26,8 +26,8 @@
 
     <header id="masthead" class="site-header">
         <div class="site-branding">
+            <a href="<?php echo home_url(); ?>" class="custom-logo-link" rel="home" itemprop="url"><img class="custom-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ARMD-logo.svg" alt="AndrewRMinion Design" /></a>
             <?php
-            the_custom_logo();
             if ( get_field( 'custom_header' ) !== '' && ! is_null( get_field( 'custom_header' ) ) ) {
                 $title = get_field( 'custom_header' );
             } else {
