@@ -21,7 +21,7 @@
             the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
         endif;
 
-        if ( 'post' === get_post_type() ) : ?>
+        if ( in_array( get_post_type(), array( 'post', 'portfolio_piece' ) ) ) : ?>
         <div class="entry-meta">
             <?php andrewrminion_posted_on(); ?>
         </div><!-- .entry-meta -->
