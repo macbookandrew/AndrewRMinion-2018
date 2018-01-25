@@ -29,11 +29,15 @@
     margin: 0 0 1.5em;
 }
 
+.post-thumbnail {
+    text-align: center;
+}
+
 a.post-thumbnail {
     display: block;
     text-align: center;
 
-    &, 
+    &,
     &:hover,
     &:focus,
     &:active {
