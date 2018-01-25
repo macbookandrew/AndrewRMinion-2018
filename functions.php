@@ -183,10 +183,8 @@ add_filter( 'upload_mimes', 'armd_mime_types' );
  * @param  string $path ACF local JSON save directory
  * @return string ACF local JSON save directory
  */
-if ( ! function_exists( 'armd_acf_json_save_point' ) ) {
 function armd_acf_json_save_point( $path ) {
     return get_stylesheet_directory() . '/acf-json';
-}
 }
 add_filter( 'acf/settings/save_json', 'armd_acf_json_save_point' );
 
@@ -195,10 +193,8 @@ add_filter( 'acf/settings/save_json', 'armd_acf_json_save_point' );
  * @param  array $path ACF local JSON open directory
  * @return array ACF local JSON open directory
  */
-if ( ! function_exists( 'armd_acf_json_load_point' ) ) {
 function armd_acf_json_load_point( $path ) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
-}
 }
 add_filter( 'acf/settings/load_json', 'armd_acf_json_load_point' );
