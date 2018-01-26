@@ -13,6 +13,24 @@ a {
         }
     }
 
+    &.button,
+    pre,
+    code {
+        text-shadow: none !important;
+    }
+
+    .hentry & {
+        @include text-shadow($theme-light-gray);
+    }
+
+    .widget-area & {
+        @include text-shadow($theme-med-gray);
+    }
+
+    .site-footer & {
+        @include text-shadow($theme-dark-gray);
+    }
+
     &:visited {
         color: $color__link-visited;
     }
@@ -27,5 +45,25 @@ a {
     &:hover,
     &:active {
         outline: 0;
+    }
+
+    .widget-area & {
+        color: $theme-light-gray;
+        box-shadow: inset 0 -1px 0 $theme-light-gray;
+
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: inset 0 0 0 transparent, 0 3px 0 $theme-light-gray;
+        }
+    }
+
+    .site-footer & {
+        &:hover,
+        &:focus,
+        &:active {
+            color: $theme-light-gray;
+            box-shadow: inset 0 0 0 transparent, 0 3px 0 $theme-light-gray;
+        }
     }
 }

@@ -1,18 +1,7 @@
 #secondary.widget-area {
     margin-top: 2em;
     background-color: $theme-med-gray;
-
-    &, & a { color: white; }
-
-    a {
-        box-shadow: inset 0 -1px 0 white;
-
-        &:hover,
-        &:active,
-        &:focus {
-            box-shadow: inset 0 0 0 transparent, 0 3px 0 white;
-        }
-    }
+    color: $theme-light-gray;
 
     .widget-wrapper {
         @include site-width();
