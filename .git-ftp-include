@@ -23,6 +23,7 @@ assets/css/style.min.css:src/sass/typography/_headings.scss
 assets/css/style.min.css:src/sass/site/_site.scss
 assets/css/style.min.css:src/sass/site/primary/_comments.scss
 assets/css/style.min.css:src/sass/site/primary/_posts-and-pages.scss
+assets/css/style.min.css:src/sass/site/primary/_downloads.scss
 assets/css/style.min.css:src/sass/site/secondary/_widgets.scss
 assets/css/style.min.css:src/sass/modules/_alignments.scss
 assets/css/style.min.css:src/sass/modules/_accessibility.scss
@@ -59,6 +60,7 @@ assets/css/style.min.css.map:src/sass/typography/_headings.scss
 assets/css/style.min.css.map:src/sass/site/_site.scss
 assets/css/style.min.css.map:src/sass/site/primary/_comments.scss
 assets/css/style.min.css.map:src/sass/site/primary/_posts-and-pages.scss
+assets/css/style.min.css.map:src/sass/site/primary/_downloads.scss
 assets/css/style.min.css.map:src/sass/site/secondary/_widgets.scss
 assets/css/style.min.css.map:src/sass/modules/_alignments.scss
 assets/css/style.min.css.map:src/sass/modules/_accessibility.scss
