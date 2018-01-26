@@ -1,4 +1,17 @@
 table {
     margin: 0 0 1.5em;
     width: 100%;
+
+    &#edd_checkout_cart {
+        @media screen and (max-width: 37.5em) {
+            thead {
+                display: none;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
 }
