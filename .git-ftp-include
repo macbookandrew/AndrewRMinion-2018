@@ -1,6 +1,6 @@
-assets/js/customizer.js:src/js/customizer.min.js
-assets/js/navigation.js:src/js/navigation.min.js
-assets/js/skip-link-focus-fix.js:src/js/skip-link-focus-fix.min.js
+assets/js/customizer.min.js:src/js/customizer.js
+assets/js/navigation.min.js:src/js/navigation.js
+assets/js/skip-link-focus-fix.min.js:src/js/skip-link-focus-fix.js
 
 assets/css/style.min.css:src/sass/forms/_forms.scss
 assets/css/style.min.css:src/sass/forms/_buttons.scss
