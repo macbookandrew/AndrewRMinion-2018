@@ -13,20 +13,31 @@
 }
 
 .site-branding {
-    .custom-logo {
-        width: 100px;
-        min-width: 100px;
-        padding-right: 1em;
-    }
+    @media screen and (min-width: 37.5em) {
+        .custom-logo {
+            width: 100px;
+            min-width: 100px;
+            padding-right: 1em;
+        }
 
-    h1.page-title {
-        clear: none;
-        display: inline-block;
-        margin-right: 100px;
+        h1.page-title {
+            clear: none;
+            display: inline-block;
+            margin-right: 100px;
+        }
     }
 
     @supports (display: flex) {
         align-items: center;
+
+        @media screen and (max-width: 37.5em) {
+            flex-wrap: wrap;
+
+            .custom-logo-link {
+                display: block;
+                margin: 1em auto 0;
+            }
+        }
 
         .page-title {
             width: 100%;
