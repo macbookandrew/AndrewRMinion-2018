@@ -7,7 +7,7 @@
  * @package AndrewRMinion_Design_2018
  */
 
-const ARMD_THEME_VERSION = '1.0.1';
+const ARMD_THEME_VERSION = '1.0.2';
 
 if ( ! function_exists( 'andrewrminion_setup' ) ) :
     /**
