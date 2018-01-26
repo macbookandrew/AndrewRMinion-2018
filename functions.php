@@ -300,3 +300,18 @@ function armd_archive_title( $title ) {
     return str_replace( 'Archives: ', '', $title );
 }
 add_filter( 'get_the_archive_title', 'armd_archive_title' );
+
+/**
+ * Add custom favicons
+ */
+function armd_favicons() { ?>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1516937130">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=1516937130">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=1516937130">
+    <link rel="manifest" href="/manifest.json?v=1516937130">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=1516937130" color="#67b346">
+    <link rel="shortcut icon" href="/favicon.ico?v=1516937130">
+    <meta name="theme-color" content="#e9e8ea">
+<?php
+}
+add_action( 'wp_head', 'armd_favicons' );
