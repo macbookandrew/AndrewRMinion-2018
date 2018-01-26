@@ -6,17 +6,17 @@
 
 // Font variations
 @mixin font-italic() {
-    font-family: deliciousitalic;
+    font-family: $font__italic;
     font-style: normal;
 }
 
 @mixin font-bold() {
-    font-family: deliciousbold;
+    font-family: $font__bold;
     font-weight: 400;
 }
 
 @mixin font-bold-italic() {
-    font-family: deliciousbolditalic;
+    font-family: $font__bolditalic;
     font-weight: 400;
     font-style: normal;
 }
