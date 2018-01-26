@@ -6,11 +6,12 @@ $theme-green:        #67B346;
 $color__background-body: $theme-light-gray;
 $color__background-screen: $theme-light-gray;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: $theme-green;
 $color__background-pre: lighten($theme-green, 48);
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
+$color__text-button: $theme-light-gray;
 $color__text-input: $theme-dark-gray;
 $color__text-input-focus: #111;
 $color__link: $theme-green;

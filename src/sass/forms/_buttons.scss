@@ -1,14 +1,26 @@
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    border: 1px solid;
-    border-color: $color__border-button;
+    border: none;
     border-radius: 3px;
     background: $color__background-button;
-    color: rgba(0, 0, 0, .8);
     line-height: 1;
     padding: .4em .6em;
+    margin-bottom: .5em;
+
+    &,
+    &:visited {
+        color: $color__text-button;
+    }
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+    }
 
     &:hover {
         border-color: $color__border-button-hover;
@@ -17,5 +29,16 @@ input[type="submit"] {
     &:active,
     &:focus {
         border-color: $color__border-button-focus;
+    }
+
+    .site-header &,
+    .widget-area &,
+    .site-footer & {
+        background-color: $theme-light-gray;
+
+        &,
+        &:visited {
+            color: $theme-dark-gray;
+        }
     }
 }
