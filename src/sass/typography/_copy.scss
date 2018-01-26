@@ -3,7 +3,7 @@ p {
 }
 
 dfn, cite, em, i {
-    font-style: italic;
+    @include font-italic();
 }
 
 blockquote {

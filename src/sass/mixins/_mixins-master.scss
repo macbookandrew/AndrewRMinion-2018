@@ -4,6 +4,23 @@
     font-size: $sizeValue * 1rem;
 }
 
+// Font variations
+@mixin font-italic() {
+    font-family: deliciousitalic;
+    font-style: normal;
+}
+
+@mixin font-bold() {
+    font-family: deliciousbold;
+    font-weight: 400;
+}
+
+@mixin font-bold-italic() {
+    font-family: deliciousbolditalic;
+    font-weight: 400;
+    font-style: normal;
+}
+
 // Center block
 @mixin center-block {
     display: block;

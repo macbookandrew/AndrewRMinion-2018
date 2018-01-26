@@ -24,7 +24,7 @@ li {
 }
 
 dt {
-    font-weight: bold;
+    @include font-bold();
 }
 
 dd {

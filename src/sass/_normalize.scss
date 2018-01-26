@@ -56,11 +56,11 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: bold;
+    @include font-bold();
 }
 
 dfn {
-    font-style: italic;
+    @include font-italic();
 }
 
 h1 {
@@ -204,7 +204,7 @@ textarea {
 }
 
 optgroup {
-    font-weight: bold;
+    @include font-bold();
 }
 
 table {
