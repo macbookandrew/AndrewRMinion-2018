@@ -203,8 +203,9 @@ add_filter( 'acf/settings/load_json', 'armd_acf_json_load_point' );
  * Add custom thumbnail size
  */
 function armd_image_sizes() {
-    add_image_size( 'portfolio-banner', 2000, 288, true );
-    add_image_size( 'portfolio-banner-large', 3000, 432, true );
+    add_image_size( 'portfolio-banner', 1200, 630, true );
+    add_image_size( 'portfolio-banner-med', 1800, 945, true );
+    add_image_size( 'portfolio-banner-large', 2400, 1260, true );
 }
 add_action( 'after_setup_theme', 'armd_image_sizes' );
 

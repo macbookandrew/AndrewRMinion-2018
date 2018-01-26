@@ -112,7 +112,13 @@ function andrewrminion_post_thumbnail() {
     if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
         return;
     }
+    ?>
 
+    <style type="text/css">
+        .post-<?php the_ID(); ?> .post-thumbnail:before { background-image: url('<?php the_post_thumbnail_url(); ?>'); }
+    </style>
+
+    <?php
     if ( is_singular() ) :
     ?>
 

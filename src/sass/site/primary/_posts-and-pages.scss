@@ -31,6 +31,31 @@
 
 .post-thumbnail {
     text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        display: block;
+        content: '';
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -1em;
+        right: -1em;
+        bottom: -1em;
+        left: -1em;
+        filter: blur(10px);
+        z-index: -1;
+    }
+
+    img {
+        @include site-width();
+        box-shadow: 0 0 5px rgba($theme-dark-gray,0.5);
+        padding: 0;
+        max-height: 33vh;
+        max-width: initial;
+        width: auto;
+    }
 }
 
 a.post-thumbnail {
