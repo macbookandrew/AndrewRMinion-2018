@@ -6,6 +6,6 @@
 
 .edd-description {
     display: block;
-    @include font-italic();
+    font-style: italic;
     font-size: 85%;
 }

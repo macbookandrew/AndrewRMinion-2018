@@ -4,23 +4,6 @@
     font-size: $sizeValue * 1rem;
 }
 
-// Font variations
-@mixin font-italic() {
-    font-family: $font__italic;
-    font-style: normal;
-}
-
-@mixin font-bold() {
-    font-family: $font__bold;
-    font-weight: 400;
-}
-
-@mixin font-bold-italic() {
-    font-family: $font__bolditalic;
-    font-weight: 400;
-    font-style: normal;
-}
-
 // Text shadow
 @mixin text-shadow($shadow-color) {
     text-shadow: 2px 0px $shadow-color,

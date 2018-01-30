@@ -17,7 +17,7 @@ textarea {
 .entry-meta,
 .entry-footer {
     font-size: 80%;
-    @include font-italic();
+    font-style: italic;
     margin-bottom: 1em;
 }
 
