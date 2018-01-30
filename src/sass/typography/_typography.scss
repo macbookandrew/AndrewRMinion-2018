@@ -28,3 +28,15 @@ textarea {
 .site-footer {
     font-size: 80%;
 }
+
+::selection {
+    background: $theme-green;
+    color: $theme-dark-gray;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: $theme-green;
+    color: $theme-dark-gray;
+    text-shadow: none;
+}
