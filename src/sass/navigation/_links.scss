@@ -31,6 +31,10 @@ a {
         @include text-shadow($theme-dark-gray);
     }
 
+    .gist-meta & {
+        @include text-shadow(#f7f7f7);
+    }
+
     &:visited {
         color: $color__link-visited;
     }

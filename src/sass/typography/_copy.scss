@@ -15,10 +15,8 @@ address {
     margin: 0 0 1.5em;
 }
 
-pre {
-    background: $color__background-pre;
-    border: 1px solid $color__border-pre;
-    border-radius: 2px;
+pre,
+.gist .gist-data {
     font-family: $font__pre;
     font-size: 0.75em;
     line-height: $font__line-height-pre;
@@ -34,14 +32,25 @@ pre {
     }
 }
 
+pre,
+.gist .gist-data,
+.gist .gist-meta {
+    background-color: $color__background-pre;
+    border: 1px solid $color__border-pre !important;
+    border-radius: 2px;
+}
+
+.gist .gist-file { border: none !important; }
+
+.gist .blob-code-inner {
+    font-family: $font__code !important;
+}
+
 code, kbd, tt, var {
     font-family: $font__code;
-    font-size: 0.75em;
-    background-color: $color__background-pre;
-    padding-right: 0.3em;
-    padding-left: 0.3em;
-    border: 1px solid $color__border-pre;
-    border-radius: 2px;
+    font-size: 0.95em;
+    color: $color__text-code;
+    font-weight: 400;
 }
 
 abbr, acronym {

@@ -7,7 +7,7 @@
  * @package AndrewRMinion_Design_2018
  */
 
-const ARMD_THEME_VERSION = '1.0.5';
+define( 'ARMD_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 
 if ( ! function_exists( 'andrewrminion_setup' ) ) :
     /**
@@ -136,7 +136,7 @@ function andrewrminion_scripts() {
             urls: ['" . get_stylesheet_directory_uri() . "/assets/fonts/stylesheet.css']
         },
         google: {
-          families: ['Source Code Pro:500,900']
+          families: ['Source Code Pro:400,700']
         },
     });";
 
