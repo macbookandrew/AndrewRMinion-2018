@@ -264,7 +264,7 @@ function armd_custom_post_type() {
     $tax_labels = array(
         'name'                       => 'Project Types',
         'singular_name'              => 'Project Type',
-        'menu_name'                  => 'Project Type',
+        'menu_name'                  => 'Project Types',
         'all_items'                  => 'Project Types',
         'parent_item'                => 'Project Type',
         'parent_item_colon'          => 'Project Type:',
@@ -278,6 +278,12 @@ function armd_custom_post_type() {
         'choose_from_most_used'      => 'Choose from the most used project types',
     );
 
+    $tax_rewrite = array(
+        'slug'                       => 'work-type',
+        'with_front'                 => true,
+        'hierarchical'               => true,
+    );
+
     $tax_args = array(
         'labels'                     => $tax_labels,
         'hierarchical'               => true,
@@ -286,9 +292,10 @@ function armd_custom_post_type() {
         'show_admin_column'          => true,
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
+        'rewrite'                    => $tax_rewrite,
     );
 
-    register_taxonomy( 'project_types', 'portfolio_piece', $args );
+    register_taxonomy( 'project_types', 'portfolio_piece', $tax_args );
 }
 add_action( 'init', 'armd_custom_post_type', 0 );
 
