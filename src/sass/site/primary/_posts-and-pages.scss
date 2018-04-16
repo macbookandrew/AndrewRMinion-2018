@@ -1,7 +1,8 @@
 .site-main > *:not(.hentry),
 .entry-header,
 .entry-content,
-.entry-footer {
+.entry-footer,
+.entry-summary {
     @include site-width();
 }
 
