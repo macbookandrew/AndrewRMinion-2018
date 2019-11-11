@@ -123,8 +123,6 @@ function andrewrminion_scripts() {
 
     wp_enqueue_script( 'andrewrminion-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array(), ARMD_THEME_VERSION, true );
 
-    wp_enqueue_script( 'hubspot', 'https://js.hs-scripts.com/4412100.js', array(), NULL, true );
-
     wp_enqueue_script( 'andrewrminion-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), ARMD_THEME_VERSION, true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
